@@ -7,12 +7,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.IdentityModel.Tokens.Jwt;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IdentityModel.Tokens.Jwt;
 
 namespace QLDL_FE
 {
@@ -27,6 +29,16 @@ namespace QLDL_FE
             InitializeComponent();
             _jwtToken = token; // Cất token vào "túi"
             ParseToken(_jwtToken);
+        }
+
+        public class GlobalCustomerDTO
+        {
+            public string MaKH { get; set; }
+            public string TenKH { get; set; }
+            public string DiaChi { get; set; }
+            public string SoDT { get; set; }
+            public string Email { get; set; }
+            public string TenChiNhanh { get; set; } // Cột quan trọng
         }
 
         private void ParseToken(string token)
@@ -137,34 +149,31 @@ namespace QLDL_FE
 
         private async void btnTimKhachHang_Click(object sender, EventArgs e)
         {
-            string maKH = txtTimMaKH.Text;
-            if (string.IsNullOrWhiteSpace(maKH))
+            string tenKH = txtTimTenKH.Text; // <<< Lấy Tên
+            if (string.IsNullOrWhiteSpace(tenKH))
             {
-                MessageBox.Show("Vui lòng nhập Mã Khách hàng cần tìm.");
+                MessageBox.Show("Vui lòng nhập Tên Khách hàng cần tìm.");
                 return;
             }
 
             this.Cursor = Cursors.WaitCursor;
-            dgvData.DataSource = null; // Xóa lưới
+            dgvData.DataSource = null;
 
             try
             {
-                // 1. GỌI API GET (Token NV đã được gắn sẵn)
-                // API sẽ tự biết kết nối Site 1 hay Site 2
-                var response = await ApiClient.Instance.GetAsync($"/api/KhachHang/{maKH}");
+                // 1. GỌI API GET (TÌM THEO TÊN)
+                var response = await ApiClient.Instance.GetAsync($"/api/KhachHang/search-local?ten={Uri.EscapeDataString(tenKH)}");
 
                 if (response.IsSuccessStatusCode)
                 {
                     var jsonResponse = await response.Content.ReadAsStringAsync();
-
-                    // Vì chỉ trả về 1 khách hàng, chúng ta cho nó vào 1 danh sách tạm
                     var data = JsonConvert.DeserializeObject<dynamic>(jsonResponse);
-                    dgvData.DataSource = new List<dynamic> { data };
-                    // (Nếu không thấy, có thể KH đó ở Site khác)
+
+                    // 2. Đổ KẾT QUẢ (có thể là nhiều dòng) vào lưới
+                    dgvData.DataSource = data;
                 }
                 else
                 {
-                    // Lỗi (ví dụ 404 Not Found nếu KH không có ở Site này)
                     var error = await response.Content.ReadAsStringAsync();
                     MessageBox.Show($"Lỗi API: {response.StatusCode}\r\n{error}", "Lỗi");
                 }
@@ -199,35 +208,172 @@ namespace QLDL_FE
 
             try
             {
-                // 1. Xây dựng URL với Query Parameters
+                // 1. Xây dựng URL
                 string url = $"/api/Reporting/tong-tien?maNV_thu={Uri.EscapeDataString(maNV)}&maKH_chi={Uri.EscapeDataString(maKH)}";
 
-                // 2. GỌI API (Token Admin đã được gắn sẵn)
+                // 2. Gọi API
                 var response = await ApiClient.Instance.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)
-                { 
-                    var jsonResponse = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<dynamic>(jsonResponse);
+                {
+                    // 1. Đọc chuỗi JSON từ API
+                    var jsonContent = await response.Content.ReadAsStringAsync();
 
-                // 4. Hiển thị kết quả
-                MessageBox.Show($"Tổng số tiền NV {data.MaNhanVien} đã thu từ KH {data.MaKhachHang} là: {data.TongSoTienDaThu}", "Kết quả Báo cáo (Câu 1)");
+                    // 2. Dùng 'dynamic' để bóc tách dữ liệu nhanh gọn
+                    // (Vì JSON trả về có dạng object { key: value })
+                    dynamic data = JsonConvert.DeserializeObject(jsonContent);
+
+                    // 3. Lấy số tiền ra
+                    double tongTien = data.tongSoTienDaThu;
+
+                    // 4. Hiển thị kết quả
+                    MessageBox.Show($"Tổng số tiền NV {maNV} đã thu từ KH {maKH} là:\n\n{tongTien.ToString("N0")} VNĐ",
+                                    "Kết quả Báo cáo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
                 }
                 else
+                {
+                    var error = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Lỗi API: {error}", "Lỗi");
+                }
+            }
+            catch (Exception ex)
             {
-                var error = await response.Content.ReadAsStringAsync();
-                MessageBox.Show($"Lỗi API: {error}", "Lỗi");
+                MessageBox.Show($"Lỗi kết nối: {ex.Message}", "Lỗi Mạng/CSDL");
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
             }
         }
-    catch (Exception ex)
-    {
-        // 5. Báo lỗi Mạng (Nếu 1 trong 2 Site Con bị tắt khi SP đang chạy)
-        MessageBox.Show($"Lỗi kết nối hoặc Linked Server: {ex.Message}\r\n(Hãy đảm bảo cả 2 Máy Con đều đang bật!)", "Lỗi Mạng/CSDL");
-    }
-    finally
-    {
-        this.Cursor = Cursors.Default;
-    }
-}
+
+        private async void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = txtTuKhoa.Text.Trim();
+
+            // 1. Validate đầu vào
+            if (string.IsNullOrWhiteSpace(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa (Tên khách hàng hoặc SĐT).", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            this.Cursor = Cursors.WaitCursor;
+
+            try
+            {
+                // 2. Xây dựng URL
+                // Lưu ý: Tìm kiếm thường dùng GET
+                string url = $"/api/Admin/search-customer-global?keyword={Uri.EscapeDataString(keyword)}";
+
+                // 3. GỌI API (GET)
+                // Token Admin đã được gắn sẵn trong ApiClient
+                var response = await ApiClient.Instance.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // 4. Đọc dữ liệu JSON trả về
+                    string jsonResult = await response.Content.ReadAsStringAsync();
+
+                    // 5. Deserialize JSON thành List Object
+                    var data = JsonConvert.DeserializeObject<List<GlobalCustomerDTO>>(jsonResult);
+
+                    // 6. Hiển thị lên DataGridView
+                    dgvData.DataSource = data;
+
+                    // Tinh chỉnh giao diện lưới một chút cho đẹp
+                    if (dgvData.Columns["TenChiNhanh"] != null)
+                    {
+                        dgvData.Columns["TenChiNhanh"].HeaderText = "Chi Nhánh (Nguồn)";
+                        dgvData.Columns["TenChiNhanh"].Width = 200;
+                    }
+
+                    if (data == null || data.Count == 0)
+                    {
+                        MessageBox.Show("Không tìm thấy khách hàng nào khớp với từ khóa trên toàn hệ thống.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    // Báo lỗi từ Server trả về
+                    var error = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Lỗi API: {response.StatusCode}\r\n{error}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Báo lỗi hệ thống/mạng
+                MessageBox.Show($"Lỗi kết nối: {ex.Message}\r\n\r\n(Hãy kiểm tra xem API và SQL Server Trụ Sở có đang chạy không)", "Lỗi Hệ Thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private async void btnTimKiemGlobal_Click(object sender, EventArgs e)
+        {
+            string keyword = txtTuKhoa.Text.Trim();
+
+            // 1. Kiểm tra đầu vào
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa (Tên khách hoặc SĐT)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            this.Cursor = Cursors.WaitCursor;
+            dgvData.DataSource = null; // Xóa dữ liệu cũ trên lưới
+
+            try
+            {
+                // 2. Xây dựng URL (Dùng Uri.EscapeDataString để xử lý ký tự đặc biệt/tiếng Việt)
+                // Lưu ý: Dùng ApiClient nên chỉ cần đường dẫn tương đối, không cần "https://localhost..."
+                string url = $"/api/Admin/search-customer-global?keyword={Uri.EscapeDataString(keyword)}";
+
+                // 3. GỌI API bằng ApiClient (Token đã được tự động xử lý bên trong)
+                var response = await ApiClient.Instance.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    // 4. Đọc kết quả JSON
+                    string jsonResult = await response.Content.ReadAsStringAsync();
+
+                    // 5. Chuyển đổi JSON sang List
+                    var data = JsonConvert.DeserializeObject<List<GlobalCustomerDTO>>(jsonResult);
+
+                    // 6. Hiển thị lên lưới
+                    dgvData.DataSource = data;
+
+                    // Tinh chỉnh hiển thị cột (nếu cần)
+                    if (dgvData.Columns["TenChiNhanh"] != null)
+                    {
+                        dgvData.Columns["TenChiNhanh"].HeaderText = "Chi Nhánh (Nguồn)";
+                        dgvData.Columns["TenChiNhanh"].Width = 200;
+                    }
+
+                    if (data.Count == 0)
+                    {
+                        MessageBox.Show("Không tìm thấy khách hàng nào trên toàn hệ thống.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    // Báo lỗi từ Server trả về
+                    var error = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Lỗi API: {response.StatusCode}\r\n{error}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Báo lỗi hệ thống (Linked Server lỗi, API tắt, v.v.)
+                MessageBox.Show($"Lỗi kết nối: {ex.Message}\r\n\r\n(Kiểm tra lại API và các máy chủ SQL)", "Lỗi Hệ Thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
     }
 }

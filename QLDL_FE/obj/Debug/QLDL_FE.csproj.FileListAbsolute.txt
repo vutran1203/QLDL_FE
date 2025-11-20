@@ -47,7 +47,6 @@ C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\obj\Debug\QLDL_FE.csproj.Up2Date
 C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\obj\Debug\QLDL_FE.exe
 C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\obj\Debug\QLDL_FE.pdb
 C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\bin\Debug\QLDL_FE.pdb
-C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\obj\Debug\QLDL_FE.exe.config
 C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\obj\Debug\QLDL_FE.fAdminUpdateCN.resources
 C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\obj\Debug\QLDL_FE.fLapHopDong.resources
 C:\Users\vt412\source\repos\QLDL_FE\QLDL_FE\obj\Debug\QLDL_FE.fThemKhachHang.resources

@@ -3,56 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fghihoadon.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -70,24 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "fThemKhachHang.cs",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fThemKhachHang.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
-              "RelativeToolTip": "QLDL_FE\\fThemKhachHang.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAcwDoAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:33:46.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "fMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fMain.cs",
@@ -99,44 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "fMain.cs",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fMain.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
-              "RelativeToolTip": "QLDL_FE\\fMain.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAEwJoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T04:51:52.531Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fAdminUpdateCN.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fAdminUpdateCN.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs [Design]",
-              "RelativeToolTip": "QLDL_FE\\fAdminUpdateCN.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:53:41.808Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLogin.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fLogin.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLogin.cs [Design]",
-              "RelativeToolTip": "QLDL_FE\\fLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T04:41:48.373Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "fThemKhachHang.cs [Design]",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fThemKhachHang.cs",
@@ -148,32 +102,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "fLapHopDong.cs",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
-              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAIwBYAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "fThemKhachHang.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fThemKhachHang.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
+              "RelativeToolTip": "QLDL_FE\\fThemKhachHang.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAvwFMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:06:31.253Z",
+              "WhenOpened": "2025-11-13T17:33:46.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "fLapHopDong.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs [Design]",
-              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "ApiClient.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\ApiClient.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\ApiClient.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\ApiClient.cs",
+              "RelativeToolTip": "QLDL_FE\\ApiClient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:03:04.641Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-11-13T04:22:15.127Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "fGhiHoaDon.cs [Design]",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fGhiHoaDon.cs",
@@ -185,29 +140,75 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "fGhiHoaDon.cs",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fGhiHoaDon.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs",
-              "RelativeToolTip": "QLDL_FE\\fGhiHoaDon.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAASwDcAAAANAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "fMain.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fMain.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
+              "RelativeToolTip": "QLDL_FE\\fMain.cs",
+              "ViewState": "AgIAAMwAAAAAAAAAAADgv+YAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T05:37:09.697Z",
+              "WhenOpened": "2025-11-13T04:51:52.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
               "Title": "fAdminUpdateCN.cs",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fAdminUpdateCN.cs",
               "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs",
               "RelativeToolTip": "QLDL_FE\\fAdminUpdateCN.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAADwv0QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:56:03.879Z",
+              "WhenOpened": "2025-11-13T16:56:03.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "fMain.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.Designer.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fMain.Designer.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.Designer.cs",
+              "RelativeToolTip": "QLDL_FE\\fMain.Designer.cs",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAAAB8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-18T15:39:58.819Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fAdminUpdateCN.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fAdminUpdateCN.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs [Design]",
+              "RelativeToolTip": "QLDL_FE\\fAdminUpdateCN.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:53:41.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "fLapHopDong.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
+              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAawBgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:06:31.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "fLapHopDong.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs [Design]",
+              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:03:04.641Z"
             },
             {
               "$type": "Document",
@@ -217,26 +218,36 @@
               "RelativeDocumentMoniker": "QLDL_FE\\fLogin.cs",
               "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLogin.cs",
               "RelativeToolTip": "QLDL_FE\\fLogin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAASwCwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T04:43:25.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T04:43:25.475Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ApiClient.cs",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\ApiClient.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\ApiClient.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\ApiClient.cs",
-              "RelativeToolTip": "QLDL_FE\\ApiClient.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAgwCcAAAABAAAAAAAAAA==",
+              "Title": "fLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLogin.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fLogin.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLogin.cs [Design]",
+              "RelativeToolTip": "QLDL_FE\\fLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T04:22:15.127Z"
+              "WhenOpened": "2025-11-13T04:41:48.373Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
+              "Title": "fGhiHoaDon.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fGhiHoaDon.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs",
+              "RelativeToolTip": "QLDL_FE\\fGhiHoaDon.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAASwDoAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T05:37:09.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "fGhiHoaDon.Designer.cs",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.Designer.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fGhiHoaDon.Designer.cs",
@@ -244,12 +255,11 @@
               "RelativeToolTip": "QLDL_FE\\fGhiHoaDon.Designer.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T05:41:29.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T05:41:29.009Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\Program.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\Program.cs",

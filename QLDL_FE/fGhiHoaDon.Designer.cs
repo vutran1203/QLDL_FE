@@ -47,9 +47,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(80, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Số HĐ Mới";
+            this.label1.Text = "Số Hóa Đơn";
             // 
             // label2
             // 
@@ -75,9 +75,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(80, 77);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 16);
+            this.label4.Size = new System.Drawing.Size(87, 16);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Số Hợp đồng (cũ)";
+            this.label4.Text = "Số Hợp đồng";
             // 
             // txtSoHD
             // 
@@ -138,7 +138,7 @@
             0,
             0});
             this.numThang.Name = "numThang";
-            this.numThang.Size = new System.Drawing.Size(39, 22);
+            this.numThang.Size = new System.Drawing.Size(49, 22);
             this.numThang.TabIndex = 9;
             this.numThang.Value = new decimal(new int[] {
             1,
