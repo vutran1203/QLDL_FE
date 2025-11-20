@@ -17,15 +17,16 @@ namespace QLDL.WinForms
 
         static ApiClient()
         {
-            // 3. Cấu hình địa chỉ API
-            Instance.BaseAddress = new Uri("https://localhost:7180/"); // <<< ĐỊA CHỈ API CỦA BẠN
-            Instance.DefaultRequestHeaders.Accept.Clear();
-            Instance.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            // Tạo handler bỏ qua lỗi SSL
+            var handler = new HttpClientHandler();
+            handler.ClientCertificateOptions = ClientCertificateOption.Manual;
+            handler.ServerCertificateCustomValidationCallback =
+                (httpRequestMessage, cert, cetChain, policyErrors) => true;
 
-            // Lưu ý: Phần cấu hình SSL Handler bạn viết trong constructor static 
-            // sẽ KHÔNG có tác dụng vì 'Instance' đã được new() ở dòng số 11 rồi.
-            // Tuy nhiên, nếu localhost chạy ổn thì không cần sửa.
+
+            // Đưa handler vào constructor của HttpClient
+            Instance = new HttpClient(handler);
+            Instance.BaseAddress = new Uri("https://26.172.69.215:7180/");
         }
 
         // 4. Hàm "Giơ thẻ ra vào" (Gắn Token vào Header)

@@ -22,47 +22,70 @@ namespace QLDL_FE
 
         private async void btnLuuHopDong_Click(object sender, EventArgs e)
         {
-            var requestDto = new
-            {
-                SoHD = txtSoHD.Text,
-                MaKH = txtMaKH.Text,
-                KwDinhMuc = Convert.ToInt32(txtKwDinhMuc.Text), // Cần try-catch ở đây
-                DonGiaKW = Convert.ToDecimal(txtDonGiaKW.Text) // Cần try-catch ở đây
-            };
+            // 1. Lấy dữ liệu từ giao diện
+            string soHD = txtSoHD.Text;
+            string maKH = txtMaKH.Text;
+            string soDienKe = txtSoDienKe.Text; // <--- LẤY TỪ TEXTBOX MỚI THÊM
+            string kwDinhMucStr = txtKwDinhMuc.Text;
+            string donGiaStr = txtDonGiaKW.Text;
 
-            // 2. Đóng gói JSON
-            var jsonContent = JsonConvert.SerializeObject(requestDto);
-            var httpContent = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+            // 2. Validate (Kiểm tra rỗng)
+            if (string.IsNullOrWhiteSpace(soHD) || string.IsNullOrWhiteSpace(maKH) ||
+                string.IsNullOrWhiteSpace(soDienKe)) // <--- KIỂM TRA LUÔN CÁI NÀY
+            {
+                MessageBox.Show("Vui lòng nhập đủ thông tin (bao gồm Số Điện Kế).");
+                return;
+            }
+
+            // Parse số
+            int kwDinhMuc = int.Parse(kwDinhMucStr);
+            decimal donGia = decimal.Parse(donGiaStr);
 
             this.Cursor = Cursors.WaitCursor;
-
             try
             {
-                // 3. GỌI API (Token Nhân viên đã được gắn sẵn)
-                // API sẽ tự biết kết nối Site 1 hay Site 2 dựa trên Token
-                var response = await ApiClient.Instance.PostAsync("/api/HopDong/lap-moi", httpContent);
+                // 3. Tạo cục dữ liệu (Payload) để gửi đi
+                // Tên thuộc tính bên trái phải KHỚP với HopDongRequestDto bên API
+                var payload = new
+                {
+                    SoHD = soHD,
+                    MaKH = maKH,
+                    SoDienKe = soDienKe, // <--- BỔ SUNG DÒNG QUAN TRỌNG NÀY
+                    KwDinhMuc = kwDinhMuc,
+                    DongiaKW = donGia,
+                    NgayKy = DateTime.Now // Lấy ngày hiện tại
+                };
+
+                // 4. Gửi API
+                var json = JsonConvert.SerializeObject(payload);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await ApiClient.Instance.PostAsync("/api/HopDong/lap-hop-dong", content);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Lập hợp đồng mới thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close(); // Đóng form
+                    MessageBox.Show("Lập hợp đồng thành công!");
+                    this.Close();
                 }
                 else
                 {
-                    // 4. Báo lỗi (SP báo lỗi, vd: "Mã khách hàng không tồn tại")
                     var error = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Lỗi API: {response.StatusCode}\r\n{error}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lỗi: " + error);
                 }
             }
             catch (Exception ex)
             {
-                // 5. Báo lỗi Mạng (Máy Con bị tắt)
-                MessageBox.Show($"Lỗi kết nối API: {ex.Message}\r\n\r\n(Hãy đảm bảo Máy Con (Site) đang được bật!)", "Lỗi Mạng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi hệ thống: " + ex.Message);
             }
             finally
             {
                 this.Cursor = Cursors.Default;
             }
+        }
+
+        private void txtKwDinhMuc_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

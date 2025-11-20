@@ -40,6 +40,7 @@
             this.txtTimTenKH = new System.Windows.Forms.TextBox();
             this.btnTimKhachHang = new System.Windows.Forms.Button();
             this.gbAdmin = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnTimKiemGlobal = new System.Windows.Forms.Button();
             this.txtTuKhoa = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,7 +52,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gbNhanVien = new System.Windows.Forms.GroupBox();
+            this.btnXemTatCa = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.gbAdmin.SuspendLayout();
             this.gbNhanVien.SuspendLayout();
@@ -132,7 +136,7 @@
             // 
             this.btnThemKhachHang.Location = new System.Drawing.Point(15, 89);
             this.btnThemKhachHang.Name = "btnThemKhachHang";
-            this.btnThemKhachHang.Size = new System.Drawing.Size(163, 23);
+            this.btnThemKhachHang.Size = new System.Drawing.Size(163, 32);
             this.btnThemKhachHang.TabIndex = 7;
             this.btnThemKhachHang.Text = "Quản lý KH";
             this.btnThemKhachHang.UseVisualStyleBackColor = true;
@@ -166,6 +170,7 @@
             // 
             // gbAdmin
             // 
+            this.gbAdmin.Controls.Add(this.button1);
             this.gbAdmin.Controls.Add(this.btnTimKiemGlobal);
             this.gbAdmin.Controls.Add(this.txtTuKhoa);
             this.gbAdmin.Controls.Add(this.label5);
@@ -184,6 +189,16 @@
             this.gbAdmin.TabIndex = 11;
             this.gbAdmin.TabStop = false;
             this.gbAdmin.Text = "Chức năng Admin (Toàn cục)";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(177, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Kiểm tra kết nối";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnTimKiemGlobal
             // 
@@ -273,6 +288,9 @@
             // 
             // gbNhanVien
             // 
+            this.gbNhanVien.Controls.Add(this.button3);
+            this.gbNhanVien.Controls.Add(this.button2);
+            this.gbNhanVien.Controls.Add(this.btnXemTatCa);
             this.gbNhanVien.Controls.Add(this.btnGhiHoaDon);
             this.gbNhanVien.Controls.Add(this.btnLapHopDong);
             this.gbNhanVien.Controls.Add(this.btnTimKhachHang);
@@ -281,10 +299,40 @@
             this.gbNhanVien.Controls.Add(this.ITimTenKH);
             this.gbNhanVien.Location = new System.Drawing.Point(419, 21);
             this.gbNhanVien.Name = "gbNhanVien";
-            this.gbNhanVien.Size = new System.Drawing.Size(200, 237);
+            this.gbNhanVien.Size = new System.Drawing.Size(346, 237);
             this.gbNhanVien.TabIndex = 12;
             this.gbNhanVien.TabStop = false;
             this.gbNhanVien.Text = "Chức năng nhân viên";
+            // 
+            // btnXemTatCa
+            // 
+            this.btnXemTatCa.Location = new System.Drawing.Point(195, 26);
+            this.btnXemTatCa.Name = "btnXemTatCa";
+            this.btnXemTatCa.Size = new System.Drawing.Size(131, 23);
+            this.btnXemTatCa.TabIndex = 11;
+            this.btnXemTatCa.Text = "Xem dsKH";
+            this.btnXemTatCa.UseVisualStyleBackColor = true;
+            this.btnXemTatCa.Click += new System.EventHandler(this.btnXemTatCa_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(195, 60);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 23);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Xuất ds Hóa Đơn";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(184, 89);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(156, 32);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Xuất ds Hợp Đồng";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // fMain
             // 
@@ -335,5 +383,9 @@
         private System.Windows.Forms.TextBox txtTuKhoa;
         private System.Windows.Forms.Label label5;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Button btnXemTatCa;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }

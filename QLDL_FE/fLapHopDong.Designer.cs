@@ -37,6 +37,8 @@
             this.txtDonGiaKW = new System.Windows.Forms.TextBox();
             this.txtKwDinhMuc = new System.Windows.Forms.TextBox();
             this.btnLuuHopDong = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSoDienKe = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -102,10 +104,11 @@
             this.txtKwDinhMuc.Name = "txtKwDinhMuc";
             this.txtKwDinhMuc.Size = new System.Drawing.Size(100, 22);
             this.txtKwDinhMuc.TabIndex = 7;
+            this.txtKwDinhMuc.TextChanged += new System.EventHandler(this.txtKwDinhMuc_TextChanged);
             // 
             // btnLuuHopDong
             // 
-            this.btnLuuHopDong.Location = new System.Drawing.Point(296, 224);
+            this.btnLuuHopDong.Location = new System.Drawing.Point(296, 248);
             this.btnLuuHopDong.Name = "btnLuuHopDong";
             this.btnLuuHopDong.Size = new System.Drawing.Size(75, 23);
             this.btnLuuHopDong.TabIndex = 8;
@@ -113,11 +116,29 @@
             this.btnLuuHopDong.UseVisualStyleBackColor = true;
             this.btnLuuHopDong.Click += new System.EventHandler(this.btnLuuHopDong_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(150, 223);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 16);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Số điện kế";
+            // 
+            // txtSoDienKe
+            // 
+            this.txtSoDienKe.Location = new System.Drawing.Point(271, 217);
+            this.txtSoDienKe.Name = "txtSoDienKe";
+            this.txtSoDienKe.Size = new System.Drawing.Size(100, 22);
+            this.txtSoDienKe.TabIndex = 10;
+            // 
             // fLapHopDong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtSoDienKe);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnLuuHopDong);
             this.Controls.Add(this.txtKwDinhMuc);
             this.Controls.Add(this.txtDonGiaKW);
@@ -145,5 +166,7 @@
         private System.Windows.Forms.TextBox txtDonGiaKW;
         private System.Windows.Forms.TextBox txtKwDinhMuc;
         private System.Windows.Forms.Button btnLuuHopDong;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSoDienKe;
     }
 }

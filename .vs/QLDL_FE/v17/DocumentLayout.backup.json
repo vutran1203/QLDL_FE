@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,16 +27,12 @@
       "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\apiclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fthemkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|c:\\users\\vt412\\source\\repos\\qldl_fe\\qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fghihoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\fadminupdatecn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|solutionrelative:qldl_fe\\flaphopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A1AE2107-DBED-4441-9416-542E3DB12FEA}|QLDL_FE\\QLDL_FE.csproj|C:\\Users\\vt412\\source\\repos\\QLDL_FE\\qldl_fe\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -74,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "fMain.cs [Design]",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fMain.cs",
@@ -90,70 +90,91 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "fThemKhachHang.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fThemKhachHang.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs [Design]",
-              "RelativeToolTip": "QLDL_FE\\fThemKhachHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:31:27.887Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "fThemKhachHang.cs",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fThemKhachHang.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
-              "RelativeToolTip": "QLDL_FE\\fThemKhachHang.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAvwFMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:33:46.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "ApiClient.cs",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\ApiClient.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\ApiClient.cs",
               "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\ApiClient.cs",
               "RelativeToolTip": "QLDL_FE\\ApiClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T04:22:15.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-13T04:22:15.127Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "fGhiHoaDon.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fGhiHoaDon.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs [Design]",
-              "RelativeToolTip": "QLDL_FE\\fGhiHoaDon.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T05:35:26.359Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "fMain.cs",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fMain.cs",
               "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.cs",
               "RelativeToolTip": "QLDL_FE\\fMain.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAADgv+YAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAFQCAAAAAAAAAADgv0ECAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T04:51:52.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fLapHopDong.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs [Design]",
+              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:03:04.641Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fLapHopDong.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
+              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAADgvxgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:06:31.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "fThemKhachHang.cs",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fThemKhachHang.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
+              "RelativeToolTip": "QLDL_FE\\fThemKhachHang.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAvwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:33:46.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "fThemKhachHang.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fThemKhachHang.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fThemKhachHang.cs [Design]",
+              "RelativeToolTip": "QLDL_FE\\fThemKhachHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:31:27.887Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "fGhiHoaDon.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs",
+              "RelativeDocumentMoniker": "QLDL_FE\\fGhiHoaDon.cs",
+              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fGhiHoaDon.cs [Design]",
+              "RelativeToolTip": "QLDL_FE\\fGhiHoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T05:35:26.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "fAdminUpdateCN.cs",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fAdminUpdateCN.cs",
@@ -165,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "fMain.Designer.cs",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fMain.Designer.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fMain.Designer.cs",
@@ -173,12 +194,11 @@
               "RelativeToolTip": "QLDL_FE\\fMain.Designer.cs",
               "ViewState": "AgIAAD0BAAAAAAAAAAAAAB8BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-18T15:39:58.819Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-18T15:39:58.819Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "fAdminUpdateCN.cs [Design]",
               "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fAdminUpdateCN.cs",
               "RelativeDocumentMoniker": "QLDL_FE\\fAdminUpdateCN.cs",
@@ -186,29 +206,6 @@
               "RelativeToolTip": "QLDL_FE\\fAdminUpdateCN.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T16:53:41.808Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "fLapHopDong.cs",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
-              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAawBgAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:06:31.253Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "fLapHopDong.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs",
-              "RelativeDocumentMoniker": "QLDL_FE\\fLapHopDong.cs",
-              "ToolTip": "C:\\Users\\vt412\\source\\repos\\QLDL_FE\\QLDL_FE\\fLapHopDong.cs [Design]",
-              "RelativeToolTip": "QLDL_FE\\fLapHopDong.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T17:03:04.641Z"
             },
             {
               "$type": "Document",
