@@ -60,7 +60,7 @@ namespace QLDL_FE
                 var json = JsonConvert.SerializeObject(payload);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-                var response = await ApiClient.Instance.PostAsync("/api/HopDong/lap-hop-dong", content);
+                var response = await ApiClient.Instance.PostAsync("/api/HopDong/lap-moi", content);
 
                 if (response.IsSuccessStatusCode)
                 {

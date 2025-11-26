@@ -45,17 +45,18 @@ namespace QLDL_FE
             try
             {
                 // 3. GỌI API (API Controller mới sẽ đọc 3 trường mới)
-                var response = await ApiClient.Instance.PostAsync("/api/KhachHang/them-moi", httpContent);
+                var response = await ApiClient.Instance.PostAsync("api/KhachHang/them-moi", httpContent);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Thêm khách hàng mới (đầy đủ) thành công!", "Thành công");
+                    MessageBox.Show("Thêm khách hàng mới thành công!", "Thành công");
                     this.Close();
                 }
                 else
                 {
                     var error = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Lỗi API: {error}", "Lỗi");
+                    MessageBox.Show($"Lỗi API: {response.StatusCode} - {response.ReasonPhrase}\nNội dung: {error}",
+                    "Chi tiết lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)

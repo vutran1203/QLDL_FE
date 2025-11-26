@@ -216,52 +216,44 @@ namespace QLDL_FE
 
         private async void btnTinhTongTien_Click(object sender, EventArgs e)
         {
-            string maNV = txtMaNVThu.Text;
-            string maKH = txtMaKHChi.Text;
+            string maNV = txtMaNVThu.Text.Trim(); // Tên textbox của bạn
+            string maKH = txtMaKHChi.Text.Trim(); // Tên textbox của bạn
 
-            if (string.IsNullOrWhiteSpace(maNV) || string.IsNullOrWhiteSpace(maKH))
+            if (string.IsNullOrEmpty(maNV) || string.IsNullOrEmpty(maKH))
             {
-                MessageBox.Show("Vui lòng nhập đủ Mã NV và Mã KH.");
+                MessageBox.Show("Vui lòng nhập Mã NV và Mã KH");
                 return;
             }
 
             this.Cursor = Cursors.WaitCursor;
-
             try
             {
-                // 1. Xây dựng URL
-                string url = $"/api/Reporting/tong-tien?maNV_thu={Uri.EscapeDataString(maNV)}&maKH_chi={Uri.EscapeDataString(maKH)}";
-
-                // 2. Gọi API
+                // 1. Gọi API
+                string url = $"/api/Reporting/tong-tien?maNV_thu={maNV}&maKH_chi={maKH}";
                 var response = await ApiClient.Instance.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    // 1. Đọc chuỗi JSON từ API
-                    var jsonContent = await response.Content.ReadAsStringAsync();
+                    // 2. Đọc JSON
+                    var jsonString = await response.Content.ReadAsStringAsync();
 
-                    // 2. Dùng 'dynamic' để bóc tách dữ liệu nhanh gọn
-                    // (Vì JSON trả về có dạng object { key: value })
-                    dynamic data = JsonConvert.DeserializeObject(jsonContent);
+                    // 3. Parse JSON (Dùng dynamic cho nhanh)
+                    dynamic data = JsonConvert.DeserializeObject(jsonString);
 
-                    // 3. Lấy số tiền ra
-                    double tongTien = data.tongSoTienDaThu;
+                    // 4. Lấy số tiền ra và Format
+                    decimal tien = data.tongSoTienDaThu;
 
-                    // 4. Hiển thị kết quả
-                    MessageBox.Show($"Tổng số tiền NV {maNV} đã thu từ KH {maKH} là:\n\n{tongTien.ToString("N0")} VNĐ",
-                                    "Kết quả Báo cáo",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                    MessageBox.Show($"Tổng số tiền NV {maNV} thu từ KH {maKH} là:\n\n{tien.ToString("N0")} VNĐ", "Kết quả");
                 }
                 else
                 {
-                    var error = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Lỗi API: {error}", "Lỗi");
+                    var err = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Lỗi API: {err}");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi kết nối: {ex.Message}", "Lỗi Mạng/CSDL");
+                MessageBox.Show($"Lỗi: {ex.Message}");
             }
             finally
             {
@@ -333,63 +325,88 @@ namespace QLDL_FE
             }
         }
 
+        // Class này dùng để hứng dữ liệu JSON từ API trả về
+        public class KhachHangGlobalDTO
+        {
+            public string MaKH { get; set; }
+            public string TenKH { get; set; }
+            public string DiaChi { get; set; }
+            public string SoDT { get; set; }
+            public string Email { get; set; }
+
+            // Cột quan trọng nhất để biết khách hàng thuộc Site nào
+            public string TenChiNhanh { get; set; }
+        }
+
         private async void btnTimKiemGlobal_Click(object sender, EventArgs e)
         {
             string keyword = txtTuKhoa.Text.Trim();
 
-            // 1. Kiểm tra đầu vào
             if (string.IsNullOrEmpty(keyword))
             {
-                MessageBox.Show("Vui lòng nhập từ khóa (Tên khách hoặc SĐT)!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập tên khách hàng cần tìm.", "Thông báo");
                 return;
             }
 
             this.Cursor = Cursors.WaitCursor;
-            dgvData.DataSource = null; // Xóa dữ liệu cũ trên lưới
+
+            // Xóa dữ liệu cũ trên lưới để tránh nhầm lẫn
+            dgvData.DataSource = null;
 
             try
             {
-                // 2. Xây dựng URL (Dùng Uri.EscapeDataString để xử lý ký tự đặc biệt/tiếng Việt)
-                // Lưu ý: Dùng ApiClient nên chỉ cần đường dẫn tương đối, không cần "https://localhost..."
-                string url = $"/api/Admin/search-customer-global?keyword={Uri.EscapeDataString(keyword)}";
+                // 2. Gọi API Tìm kiếm toàn cục
+                // URL này trỏ đến ReportingController mà chúng ta đã làm
+                string url = $"/api/Reporting/search?keyword={Uri.EscapeDataString(keyword)}";
 
-                // 3. GỌI API bằng ApiClient (Token đã được tự động xử lý bên trong)
                 var response = await ApiClient.Instance.GetAsync(url);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    // 4. Đọc kết quả JSON
-                    string jsonResult = await response.Content.ReadAsStringAsync();
+                    // 3. Đọc chuỗi JSON
+                    var json = await response.Content.ReadAsStringAsync();
 
-                    // 5. Chuyển đổi JSON sang List
-                    var data = JsonConvert.DeserializeObject<List<GlobalCustomerDTO>>(jsonResult);
+                    // 4. Convert JSON sang List DTO (Dùng class vừa tạo ở Bước 1)
+                    var data = JsonConvert.DeserializeObject<List<KhachHangGlobalDTO>>(json);
 
-                    // 6. Hiển thị lên lưới
+                    // 5. Hiển thị lên DataGridView
                     dgvData.DataSource = data;
 
-                    // Tinh chỉnh hiển thị cột (nếu cần)
-                    if (dgvData.Columns["TenChiNhanh"] != null)
+                    // 6. Tinh chỉnh giao diện cho đẹp (Tùy chọn)
+                    if (data.Count > 0)
                     {
-                        dgvData.Columns["TenChiNhanh"].HeaderText = "Chi Nhánh (Nguồn)";
-                        dgvData.Columns["TenChiNhanh"].Width = 200;
-                    }
+                        // Đổi tên cột cho thân thiện
+                        if (dgvData.Columns["MaKH"] != null) dgvData.Columns["MaKH"].HeaderText = "Mã KH";
+                        if (dgvData.Columns["TenKH"] != null) dgvData.Columns["TenKH"].HeaderText = "Họ Tên";
+                        if (dgvData.Columns["DiaChi"] != null) dgvData.Columns["DiaChi"].HeaderText = "Địa Chỉ";
 
-                    if (data.Count == 0)
+                        // Cột quan trọng: Nguồn Dữ Liệu
+                        if (dgvData.Columns["TenChiNhanh"] != null)
+                        {
+                            dgvData.Columns["TenChiNhanh"].HeaderText = "🔍 Nguồn Dữ Liệu";
+                            dgvData.Columns["TenChiNhanh"].Width = 150;
+
+                            // Tô màu xanh để Admin dễ nhận biết
+                            dgvData.Columns["TenChiNhanh"].DefaultCellStyle.ForeColor = Color.Blue;
+                            dgvData.Columns["TenChiNhanh"].DefaultCellStyle.Font = new Font(dgvData.Font, FontStyle.Bold);
+                        }
+                    }
+                    else
                     {
-                        MessageBox.Show("Không tìm thấy khách hàng nào trên toàn hệ thống.", "Kết quả", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Không tìm thấy khách hàng nào khớp với từ khóa trên toàn hệ thống.", "Kết quả");
                     }
                 }
                 else
                 {
-                    // Báo lỗi từ Server trả về
-                    var error = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Lỗi API: {response.StatusCode}\r\n{error}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // Báo lỗi nếu API trả về lỗi (ví dụ 500, 404)
+                    var err = await response.Content.ReadAsStringAsync();
+                    MessageBox.Show($"Lỗi API: {response.StatusCode}\nNội dung: {err}", "Lỗi");
                 }
             }
             catch (Exception ex)
             {
-                // Báo lỗi hệ thống (Linked Server lỗi, API tắt, v.v.)
-                MessageBox.Show($"Lỗi kết nối: {ex.Message}\r\n\r\n(Kiểm tra lại API và các máy chủ SQL)", "Lỗi Hệ Thống", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Báo lỗi nếu mất mạng hoặc API chưa bật
+                MessageBox.Show($"Lỗi kết nối: {ex.Message}\n(Kiểm tra xem API và SQL Server có đang chạy không)", "Lỗi Hệ Thống");
             }
             finally
             {
@@ -441,44 +458,62 @@ namespace QLDL_FE
             }
         }
 
-        public class ServerHealthDTO
+        public class KetQuaKiemTraDTO
         {
-            public string ServerName { get; set; }
-            public string Status { get; set; }  // "ONLINE" hoặc "OFFLINE"
-            public string Message { get; set; }
+            public string TenSite { get; set; }
+            public string TrangThai { get; set; }
+            public string GhiChu { get; set; }
         }
 
         private async void button1_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            dgvData.DataSource = null; // Xóa dữ liệu cũ
+
+            // Xóa dữ liệu cũ
+            dgvData.DataSource = null;
 
             try
             {
-                // 1. Gọi API Kiểm tra sức khỏe hệ thống
-                // Lưu ý: Đảm bảo API trả về đúng đường dẫn này
-                string url = "/api/Admin/check-connection";
-
-                var response = await ApiClient.Instance.GetAsync(url);
+                // 1. Gọi API (Sẽ mất khoảng 5-40 giây nếu có site chết, nên cần kiên nhẫn)
+                var response = await ApiClient.Instance.GetAsync("/api/Reporting/check-connection");
 
                 if (response.IsSuccessStatusCode)
                 {
-                    // 2. Đọc dữ liệu JSON
-                    var jsonResult = await response.Content.ReadAsStringAsync();
-                    var data = JsonConvert.DeserializeObject<List<ServerHealthDTO>>(jsonResult);
+                    var json = await response.Content.ReadAsStringAsync();
+                    var data = JsonConvert.DeserializeObject<List<KetQuaKiemTraDTO>>(json);
 
-                    // 3. Đổ dữ liệu vào DataGridView
+                    // 2. Hiển thị lên lưới
                     dgvData.DataSource = data;
+
+                    // 3. Tinh chỉnh giao diện
+                    if (dgvData.Columns["TenSite"] != null)
+                    {
+                        dgvData.Columns["TenSite"].HeaderText = "Tên Chi Nhánh";
+                        dgvData.Columns["TenSite"].Width = 150;
+                    }
+                    if (dgvData.Columns["TrangThai"] != null)
+                    {
+                        dgvData.Columns["TrangThai"].HeaderText = "Trạng Thái";
+                        dgvData.Columns["TrangThai"].Width = 100;
+                    }
+                    if (dgvData.Columns["GhiChu"] != null)
+                    {
+                        dgvData.Columns["GhiChu"].HeaderText = "Ghi Chú Hệ Thống";
+                        dgvData.Columns["GhiChu"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    }
+
+                    MessageBox.Show("Kiểm tra hoàn tất!", "Thông báo");
                 }
                 else
                 {
                     var error = await response.Content.ReadAsStringAsync();
-                    MessageBox.Show($"Lỗi API: {response.StatusCode}\n{error}", "Lỗi");
+                    MessageBox.Show($"Lỗi API: {error}", "Lỗi");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Lỗi ứng dụng: {ex.Message}", "Lỗi");
+                // Lỗi này thường do API bị tắt hoặc Timeout client quá ngắn
+                MessageBox.Show($"Lỗi kết nối: {ex.Message}", "Lỗi Hệ Thống");
             }
             finally
             {
@@ -578,7 +613,7 @@ namespace QLDL_FE
             try
             {
                 // 1. Gọi API
-                var response = await ApiClient.Instance.GetAsync("/api/HopDong/get-all");
+                var response = await ApiClient.Instance.GetAsync("/api/HopDong/get-all-local");
 
                 if (response.IsSuccessStatusCode)
                 {

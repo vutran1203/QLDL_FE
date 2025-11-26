@@ -7,26 +7,34 @@ namespace QLDL.WinForms
 {
     public static class ApiClient
     {
-        // 1. Tạo một HttpClient duy nhất
-        // Lưu ý: Để xử lý SSL (localhost), ta nên khởi tạo Handler ngay tại đây nếu cần thiết.
-        // Nhưng hiện tại giữ nguyên code của bạn cho đơn giản.
-        public static HttpClient Instance { get; } = new HttpClient();
+        // 1. Khai báo biến (Chưa khởi tạo ngay, để dành cho Constructor lo)
+        public static HttpClient Instance { get; private set; }
 
-        // 2. Lưu trữ Token sau khi đăng nhập
+        // 2. Lưu trữ Token
         public static string JwtToken { get; set; }
 
+        // 3. Constructor tĩnh: Chạy 1 lần duy nhất khi ứng dụng vừa mở
         static ApiClient()
         {
-            // Tạo handler bỏ qua lỗi SSL
+            // --- CẤU HÌNH BỎ QUA LỖI SSL (QUAN TRỌNG) ---
             var handler = new HttpClientHandler();
+
+            // Bỏ qua check chứng chỉ (cho cả .NET Core và .NET Framework cũ)
             handler.ClientCertificateOptions = ClientCertificateOption.Manual;
             handler.ServerCertificateCustomValidationCallback =
                 (httpRequestMessage, cert, cetChain, policyErrors) => true;
 
-
-            // Đưa handler vào constructor của HttpClient
+            // --- KHỞI TẠO HTTP CLIENT VỚI HANDLER ĐÓ ---
             Instance = new HttpClient(handler);
+
+            // Cấu hình địa chỉ Base (Dùng IP Radmin của bạn)
+            // Lưu ý: Đảm bảo IP này là IP của máy chạy API
             Instance.BaseAddress = new Uri("https://26.172.69.215:7180/");
+
+            // Cấu hình Header JSON
+            Instance.DefaultRequestHeaders.Accept.Clear();
+            Instance.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         // 4. Hàm "Giơ thẻ ra vào" (Gắn Token vào Header)
@@ -44,22 +52,17 @@ namespace QLDL.WinForms
             }
         }
 
-        // --- HÀM PATCH ĐÃ ĐƯỢC SỬA CHỮA ---
+        // 5. Hàm PATCH (Vì HttpClient cũ không có sẵn)
         public static async Task<HttpResponseMessage> PatchAsync(string endpoint, HttpContent content)
         {
-            // 1. Tạo phương thức PATCH
             var method = new HttpMethod("PATCH");
 
-            // 2. Tạo Request
-            // Vì Instance.BaseAddress đã set là "https://localhost:7180/", 
-            // nên 'endpoint' chỉ cần là phần đuôi (ví dụ: "api/KhachHang/update...")
+            // endpoint chỉ cần là phần đuôi, ví dụ: "api/KhachHang/..."
             var request = new HttpRequestMessage(method, endpoint)
             {
                 Content = content
             };
 
-            // 3. Gửi lệnh bằng Instance
-            // Token đã nằm sẵn trong Instance.DefaultRequestHeaders do hàm SetBearerToken set rồi.
             return await Instance.SendAsync(request);
         }
     }
